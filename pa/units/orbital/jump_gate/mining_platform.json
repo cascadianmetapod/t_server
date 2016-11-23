@@ -1,0 +1,98 @@
+{
+  "TEMP_texelinfo": 72.293,
+  "area_build_separation": 100,
+  "area_build_type": "Sphere",
+  "atrophy_cool_down": 15.0,
+  "atrophy_rate": 50.0,
+  "audio": {
+    "loops": {
+      "enabled": {
+        "cue": "/SE/Celestial/Planet_Engines_Loop",
+        "flag": "enable_changed",
+        "should_start_func": "is_enabled",
+        "should_stop_func": "is_disabled"
+      }
+    }
+  },
+  "base_spec": "/pa/units/orbital/base_orbital_structure/base_orbital_structure.json",
+  "build_metal_cost": 3800,
+  "description": "Orbital Anti-Matter Condenser - Produces Matter and Energy from SubSpace Quantum. Extremely Volatile",
+  "display_name": "OAMaC",
+  "energy_efficiency_requirement": 1,
+  "death_weapon": {
+    "ground_ammo_spec": "/pa/ammo/nuke_pbaoe/nuke_orbitalpbaoe.json"
+  },
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/orbital_platform"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/orbital",
+      "effect_scale": 1.0,
+      "effect_spec": "/pa/effects/specs/mining_platform_orbital_explosion.pfx"
+    }
+  },
+   "fx_offsets": [
+  {
+      "bone": "black_hole",
+      "filename": "/pa/units/orbital/jump_gate/black_hole.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "type": "idle"
+    }
+  ],
+  "max_health": 500,
+  "mesh_bounds": [
+    50,
+    50,
+    50
+  ],
+  "model": {
+    "animations": {
+       "idle": "/pa/units/orbital/jump_gate/ring_idle.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/constant_idle_anim_tree.json",
+    "filename": "/pa/units/orbital/jump_gate/oamac.papa",
+    "skirt_decal": "/pa/effects/specs/skirt_teleporter.json"
+  },
+  "physics": {
+    "collision_layers": "WL_Orbital",
+    "ignore_gravity": true,
+    "radius": 20
+  },
+  "placement_size": [
+    100,
+    100
+  ],
+  "production": {
+    "energy": 9000,
+    "metal": 36
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "orbital",
+          "radius": 250,
+          "shape": "sphere"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 105.0
+  },
+  "spawn_layers": "WL_Orbital",
+  "unit_types": [
+    "UNITTYPE_Orbital",
+    "UNITTYPE_FabOrbBuild",
+    "UNITTYPE_EnergyProduction",
+    "UNITTYPE_MetalProduction",
+    "UNITTYPE_Structure",
+    "UNITTYPE_Economy"
+  ]
+}

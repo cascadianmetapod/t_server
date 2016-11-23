@@ -1,0 +1,19 @@
+{
+  "ammo_id": "/pa/units/air/bomb_ball/bomb/bomb_burn_ammo.json",
+  "auto_attack": true,
+  "base_spec": "/pa/tools/base_missile_turret/base_missile_turret.json",
+  "firing_arc_pitch": 180,
+  "firing_arc_yaw": 360,
+  "max_range": 50,
+  "pitch_range": 50,
+  "pitch_rate": 3600,
+  "rate_of_fire": 5,
+  "target_layers": [
+   "WL_LandHorizontal",
+    "WL_WaterSurface",
+    "WL_Seafloor",
+    "WL_Underwater"
+  ],
+  "yaw_range": 50,
+  "yaw_rate": 3600
+}

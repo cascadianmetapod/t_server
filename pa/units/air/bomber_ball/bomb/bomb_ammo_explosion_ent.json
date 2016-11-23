@@ -1,0 +1,8 @@
+{
+  "recon": {
+    "observable": {
+      "layer": "surface_and_air",
+      "sphere_radius": 10
+    }
+  }
+}

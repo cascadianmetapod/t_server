@@ -1,0 +1,20 @@
+{
+  "ammo_id": "/pa/units/land/tank_heavy/tank_heavy_ammo_shell.json",
+  "arc_type": "High",
+  "auto_attack": true,
+  "base_spec": "/pa/tools/base_artillery_turret_unit/base_artillery_turret_unit.json",
+  "firing_standard_deviation": 1.5,
+  "max_firing_velocity": 10000,
+  "max_range": 350,
+  "min_firing_velocity": 10,
+  "pitch_range": 90,
+  "pitch_rate": 50,
+  "rate_of_fire": 0.2,
+  "target_layers": [
+    "WL_LandHorizontal",
+    "WL_WaterSurface"
+  ],
+  "target_priorities": [],
+  "yaw_range": 360,
+  "yaw_rate": 50
+}

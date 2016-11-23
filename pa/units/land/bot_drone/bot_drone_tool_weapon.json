@@ -1,0 +1,24 @@
+{
+  "ammo_capacity": 170,
+  "ammo_demand": 10,
+  "ammo_id": "/pa/units/sea/drone_carrier/carrier/carrier_ammo.json",
+  "ammo_per_shot": 170,
+  "ammo_source": "energy",
+  "auto_attack": true,
+  "base_spec": "/pa/tools/base_shell_turret/base_shell_turret.json",
+  "carpet_fire": true,
+  "carpet_wait_for_full_ammo": true,
+  "idle_aim_delay": 3.0,
+  "max_range": 125,
+  "pitch_range": 60,
+  "pitch_rate": 360,
+  "rate_of_fire": 0.5,
+  "spread_fire": true,
+  "target_layers": [
+    "WL_LandHorizontal",
+    "WL_WaterSurface",
+	"WL_Air"
+  ],
+  "yaw_range": 180,
+  "yaw_rate": 360
+}

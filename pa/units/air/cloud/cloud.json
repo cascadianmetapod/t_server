@@ -1,0 +1,157 @@
+{
+  "TEMP_texelinfo": 6.38702,
+  "attachable": {
+    "offsets": {
+      "head": [
+        0,
+        0.25,
+        4.5
+      ],
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "audio": {
+    "loops": {
+      "build": {
+        "cue": "/SE/Construction/Fab_contruction_beam_loop",
+        "flag": "build_target_changed",
+        "should_start_func": "has_build_target",
+        "should_stop_func": "no_build_target"
+      },
+      "move": {
+        "cue": "/SE/Movement/bot/swarm_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/bot/swarm"
+    }
+  },
+  "base_spec": "/pa/units/land/base_bot/base_bot.json",
+  "build_metal_cost": 380,
+  "buildable_types": "",
+  "description": "!LOC:Nanobot Swarm- Generates a Static Charged Lighting Attack. Rips Appart Air Units That Fly Through. Attacks Land and Air",
+  "display_name": "!LOC:Nimbus",
+  "events": {
+    "died": {
+      "audio_cue": "/SE/Death/swarm",
+      "effect_scale": 1.0
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/bot/swarm",
+      "effect_spec": ""
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "bone_body",
+      "filename": "/pa/effects/specs/nanoswarm_idle.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "type": "idle"
+    },
+	{
+      "bone": "bone_body",
+      "filename": "/pa/units/air/cloud/cloud.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "type": "idle"
+    },
+	{
+      "bone": "bone_body",
+      "filename": "/pa/units/air/cloud/cloud_idle.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "type": "idle"
+    }
+  ],
+  "guard_layer": "WL_Air",
+  "max_health": 50,
+  "mesh_bounds": [
+    4,
+    4,
+    4
+  ],
+  "model": {
+    "animations": {
+      "idle": "/pa/units/land/bot_nanoswarm/bot_nanoswarm_anim_idle.papa"
+    },
+    "animtree": "/pa/anim/anim_trees/bot_nanoswarm_anim_tree.json",
+    "filename": "/pa/units/land/bot_nanoswarm/bot_nanoswarm.papa"
+  },
+  "navigation": {
+    "acceleration": 400,
+    "brake": 400,
+    "group_preference": "back",
+    "move_speed": 40,
+    "turn_speed": 1080,
+	"vertical_speed": 40,
+    "type": "air"
+  },
+  "physics": {
+    "allow_pushing": false,
+    "radius": 4
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 40,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 40,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 7.0
+  },
+  "spawn_layers": "WL_LandHorizontal",
+  "tools": [
+    {
+      "aim_bone": "bone_body",
+      "spec_id": "/pa/units/air/cloud/cloud_tool_weapon.json"
+    },
+	{
+      "aim_bone": "bone_body",
+      "muzzle_bone": [
+        "bone_body",
+        "bone_body"
+      ],
+      "spec_id": "/pa/units/air/cloud/cloud_laser_tool_weapon.json"
+    }
+  ],
+ 
+    "unit_types": [
+    "UNITTYPE_Air",
+	"UNITTYPE_Basic",
+	"UNITTYPE_Bomber",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Deconstruction",
+    "UNITTYPE_FactoryBuild"
+  ],
+  "wreckage_health_frac": 0.0
+}

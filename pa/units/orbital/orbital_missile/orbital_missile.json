@@ -1,0 +1,186 @@
+{
+  "TEMP_texelinfo": 6.1803,
+  "attachable": {
+    "offsets": {
+      "root": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "base_spec": "/pa/units/orbital/base_orbital/base_orbital.json",
+  "build_metal_cost": 2000,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Attack",
+    "ORDER_Assist"
+  ],
+ "description": "!LOC:Orbital Drop Bomb- strategic destruction",
+  "display_name": "Teardrop",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/orbital",
+      "effect_scale": 1.75
+    },
+    "died": {
+      "audio_cue": "/SE/Death/orbital",
+      "effect_scale": 3.5,
+      "effect_spec": "/pa/effects/specs/default_explosion.pfx"
+    }
+  },
+  "fx_offsets": [
+    {
+      "bone": "bone_fire4",
+      "filename": "/pa/units/orbital/orbital_missile/mkv_jets.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        -45,
+        0
+      ],
+      "type": "moving_forward"
+    },
+    {
+      "bone": "bone_fire5",
+      "filename": "/pa/units/orbital/orbital_missile/mkv_jets.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        25,
+        45
+      ],
+      "type": "moving_forward"
+    },
+    {
+      "bone": "bone_fire6",
+      "filename": "/pa/units/orbital/orbital_missile/mkv_jets.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        25,
+        -45
+      ],
+      "type": "moving_forward"
+    },
+    {
+      "bone": "bone_fire1",
+      "filename": "/pa/units/orbital/orbital_missile/mkv_jets.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        90,
+        0
+      ]
+    },
+    {
+      "bone": "bone_fire2",
+      "filename": "/pa/units/orbital/orbital_missile/mkv_jets_small.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        -30,
+        90
+      ]
+    },
+    {
+      "bone": "bone_fire3",
+      "filename": "/pa/units/orbital/orbital_missile/mkv_jets_small.pfx",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "orientation": [
+        0,
+        -30,
+        -90
+      ]
+    }
+  ],
+  "gravwell_velocity_multiplier": 6,
+  "guard_layer": "Orbital",
+  "guard_radius": 500,
+  "influence_radius": 10,
+  "max_health": 150,
+  "mesh_bounds": [
+    6,
+    10,
+    3
+  ],
+  "model": {
+    "arrows": 5,
+    "filename": "/pa/units/orbital/orbital_missile/orbital_missileX.papa"
+  },
+  "navigation": {
+    "acceleration": 200,
+    "aggressive_behavior": "line",
+    "aggressive_distance": 5,
+    "bank_factor": 1,
+    "brake": 500,
+    "circle_max_time": 4,
+    "circle_min_time": 1,
+    "hover_time": -1,
+    "move_speed": 60,
+    "turn_speed": 180,
+    "type": "orbital"
+  },
+  "physics": {
+    "gravity_scalar": 0.001,
+    "push_class": 1,
+    "radius": 1.75
+  },
+  "planetary_arrival_cooldown_time": 0.5,
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "orbital",
+          "radius": 250,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "spawn_layers": "Orbital",
+  "system_velocity_multiplier": 6,
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "primary_weapon": true,
+      "spec_id": "/pa/units/orbital/orbital_missile/orbital_bomb_tool_weapon.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Orbital",
+    "UNITTYPE_Fighter",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Offense",
+    "UNITTYPE_FactoryBuild",
+    "UNITTYPE_SelfDestruct"
+  ],
+  "wreckage_health_frac": 0
+}

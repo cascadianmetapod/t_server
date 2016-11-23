@@ -1,0 +1,24 @@
+"/pa/units/land/tree/tree.json": ["ammo", 11],
+
+"tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": [
+        "drop001",
+        "drop005",
+        "drop007",
+        "drop004",
+        "drop002",
+        "drop006",
+        "drop003"
+      ],
+      "projectiles_per_fire": 7,
+      "spec_id": "/pa/units/land/farm/farm_tool_weapon.json"
+    }
+  ],
+  
+  
+  "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_CombatFabAdvBuild"
+	
+	"enable_terrain": false,

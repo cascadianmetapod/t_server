@@ -1,0 +1,102 @@
+{
+  "TEMP_texelinfo": 2.37699,
+  "area_build_separation": 100.0,
+  "area_build_type": "Sphere",
+  "build_metal_cost": 50,
+  "description": "!LOC: Stealthed Surveillance Device- For keeping tabs on the enemy advance",
+  "display_name": "!LOC:Bug",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/barrier"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/barrier",
+      "effect_spec": "/pa/units/land/bot_bomb/bot_bomb_ammo_explosion.pfx"
+    }
+  },
+  "max_health": 5,
+  "mesh_bounds": [
+    4.0,
+    4.0,
+    1.0
+  ],
+  "model": [
+    {
+      "filename": "/pa/units/land/land_mine/land_mine.papa",
+      "layer": "WL_LandHorizontal"
+    },
+    {
+      "filename": "/pa/units/sea/sea_mine/sea_mine.papa",
+      "layer": "WL_WaterSurface"
+    }
+  ],
+  "physics": {
+    "allow_pushing": false,
+    "allow_underground": false,
+    "collide_with_types": [
+      "Projectile"
+    ],
+    "push_sideways": false,
+    "radius": 1,
+    "shape": "Box",
+    "type": "Structure"
+  },
+  "recon": {
+    "observable": {
+      "layer": "mine"
+    },
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 250,
+          "shape": "capsule",
+          "uses_energy": true
+        },
+        {
+          "channel": "radar",
+          "layer": "surface_and_air",
+          "radius": 300,
+          "shape": "capsule",
+          "uses_energy": true
+        },
+        {
+          "channel": "sight",
+          "layer": "orbital",
+          "radius": 600,
+          "shape": "capsule",
+          "uses_energy": true
+        },
+        {
+          "channel": "sight",
+          "layer": "underwater",
+          "radius": 300,
+          "shape": "capsule",
+          "uses_energy": true
+        },
+        {
+          "channel": "radar",
+          "layer": "underwater",
+          "radius": 450,
+          "shape": "capsule",
+          "uses_energy": true
+        }
+      ]
+    }
+  },
+  "selection_icon": {
+    "diameter": 7.0
+  },
+  "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+  "strategic_icon_priority": 3,
+  "unit_types": [
+    "UNITTYPE_Structure",
+    "UNITTYPE_Land",
+    "UNITTYPE_Naval",
+    "UNITTYPE_Defense",
+    "UNITTYPE_CombatFabBuild",
+    "UNITTYPE_CombatFabAdvBuild"
+  ],
+  "wreckage_health_frac": 0.0
+}

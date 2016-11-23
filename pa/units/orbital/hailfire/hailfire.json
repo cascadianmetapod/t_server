@@ -1,0 +1,193 @@
+{
+  "TEMP_texelinfo": 6.1803,
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/air/air_fighter_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/air/fighter"
+    }
+  },
+  "base_spec": "/pa/units/orbital/base_orbital/base_orbital.json",
+  "build_metal_cost": 7200,
+  "command_caps": [
+    "ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Attack",
+    "ORDER_Assist"
+  ],
+  "description": "Mobile anti-surface missile launcher",
+  "display_name": "Hailfire Missile Barge",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/air"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Air",
+      "effect_spec": "/pa/units/orbital/hailfire/hailfire_death.pfx"
+    },
+    "fired1": {
+      "audio_cue": "/SE/Weapons/structure/tact_mis_launcher_catapult_fire",
+      "effect_spec": "/pa/units/orbital/hailfire/hailfire_missile_launch.pfx bone_fire01"
+    },
+    "fired2": {
+      "audio_cue": "/SE/Weapons/air/fighter_fire",
+      "effect_spec": "/pa/effects/specs/default_muzzle_flash.pfx bone_fire02"
+    },
+    "fired3": {
+      "audio_cue": "/SE/Weapons/structure/tact_mis_launcher_catapult_fire",
+      "effect_spec": "/pa/units/orbital/hailfire/hailfire_missile_launch.pfx bone_fire03"
+    },
+    "fired4": {
+      "audio_cue": "/SE/Weapons/air/fighter_fire",
+      "effect_spec": "/pa/effects/specs/default_muzzle_flash.pfx bone_fire04"
+    }
+  },
+  "fx_offsets": [
+    {
+      "filename": "/pa/units/orbital/excal/spaceship_jets.pfx",
+      "offset": [
+        6.1,
+        21.7,
+        -4.0
+      ],
+      "type": "moving_forward"
+    },
+    {
+      "filename": "/pa/units/orbital/excal/spaceship_jets.pfx",
+      "offset": [
+        4.9,
+        21.7,
+        -4.0
+      ],
+      "type": "moving_forward"
+    },
+    {
+      "filename": "/pa/units/orbital/excal/spaceship_jets.pfx",
+      "offset": [
+        -6.1,
+        21.7,
+        -4.0
+      ],
+      "type": "moving_forward"
+    },
+    {
+      "filename": "/pa/units/orbital/excal/spaceship_jets.pfx",
+      "offset": [
+        -4.9,
+        21.7,
+        -4.0
+      ],
+      "type": "moving_forward"
+    },
+    {
+      "filename": "/pa/units/orbital/hailfire/arc.pfx",
+      "offset": [
+        -7.5,
+        3,
+        -2.8
+      ],
+      "type": "moving_forward"
+    },
+    {
+      "filename": "/pa/units/orbital/hailfire/arc.pfx",
+      "offset": [
+        7.5,
+        3,
+        -2.8
+      ],
+      "type": "moving_forward"
+    }
+  ],
+  "gravwell_velocity_multiplier": 6.0,
+  "guard_layer": "WL_Orbital",
+  "guard_radius": 300,
+  "max_health": 8400,
+  "mesh_bounds": [
+    17.3,
+    45.0,
+    11.4
+  ],
+  "model": {
+    "animtree": "/pa/anim/anim_trees/hailfire_anim_tree.json",
+    "arrows": 5,
+    "filename": "/pa/units/orbital/hailfire/hailfire.papa"
+  },
+  "navigation": {
+    "acceleration": 30,
+    "bank_factor": 5,
+    "brake": 30,
+    "hover_time": -1.0,
+    "move_speed": 25,
+    "turn_speed": 25,
+    "type": "orbital",
+    "vertical_speed": 300
+  },
+  "physics": {
+    "gravity_scalar": 0,
+    "push_class": 2,
+    "radius": 30
+  },
+  "recon": {
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "orbital",
+          "radius": 250,
+          "shape": "sphere"
+        },
+        {
+          "channel": "radar",
+          "layer": "surface_and_air",
+          "radius": 210,
+          "shape": "capsule"
+        },
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 100,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "spawn_layers": "WL_Orbital",
+  "tools": [
+    {
+      "aim_bone": "bone_pitch03",
+      "fire_event": "fired3",
+      "muzzle_bone": "bone_fire03",
+      "record_index": 2,
+      "spec_id": "/pa/units/orbital/hailfire/hailfire_tool_weapon.json"
+    },
+    {
+      "aim_bone": "bone_pitch01",
+      "fire_event": "fired1",
+      "muzzle_bone": "bone_fire01",
+      "record_index": 0,
+      "spec_id": "/pa/units/orbital/hailfire/hailfire_tool_aa_weapon.json"
+    },
+    {
+      "aim_bone": "bone_pitch02",
+      "fire_event": "fired2",
+      "muzzle_bone": "bone_fire02",
+      "record_index": 1,
+      "spec_id": "/pa/units/orbital/hailfire/hailfire_tool_aa_weapon.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_AirDefense",
+    "UNITTYPE_Artillery",
+    "UNITTYPE_Orbital",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FactoryBuild"
+  ]
+}
