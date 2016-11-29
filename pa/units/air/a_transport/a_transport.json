@@ -26,6 +26,7 @@
   "build_metal_cost": 50,
   "command_caps": [
     "ORDER_Move",
+	"ORDER_Attack",
     "ORDER_Patrol",
     "ORDER_Assist",
     "ORDER_Load",

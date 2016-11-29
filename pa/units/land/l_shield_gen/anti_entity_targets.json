@@ -5,8 +5,7 @@
   "ammo_source": "energy",
   "anti_entity_targets": [
     
-	"/pa/units/commanders/base_commander/base_commander_aa_ammo.json",
-    "/pa/units/air/bomber/bomber_ammo.json",
+	 "/pa/units/air/bomber/bomber_ammo.json",
     "/pa/units/air/bomber_adv/bomber_adv_ammo.json",
     "/pa/units/air/bomber_heavy/bomber_heavy_ammo.json",
     "/pa/units/air/fighter/fighter_ammo.json",
@@ -20,6 +19,7 @@
     "/pa/units/land/bot_grenadier/bot_grenadier_ammo.json",
     "/pa/units/land/bot_support_commander/bot_support_commander_ammo.json",
     "/pa/units/land/bot_tactical_missile/bot_tactical_missile_ammo.json",
+    "/pa/units/land/bot_tesla/bot_tesla_ammo.json",
     "/pa/units/land/laser_defense/laser_defense_ammo.json",
     "/pa/units/land/laser_defense_adv/laser_defense_adv_ammo.json",
     "/pa/units/land/laser_defense_single/laser_defense_single_ammo.json",
@@ -37,7 +37,55 @@
     "/pa/units/sea/missile_ship/missile_ship_ammo.json",
     "/pa/units/sea/nuclear_sub/nuclear_sub_ammo.json",
     "/pa/units/sea/nuclear_sub/nuclear_sub_ammo_missile.json",
-    "/pa/units/sea/sea_scout/sea_scout_ammo.json"
+    "/pa/units/sea/sea_scout/sea_scout_ammo.json",
+	
+	      "/pa/units/sea/torpedo_launcher_adv/torpedo_launcher_adv.json",
+      
+	  "/pa/units/land/artillery_comet/artillery_comet_ammo.json",
+      "/pa/units/land/artillery_morningstar/artillery_morningstar_ammo.json",
+      "/pa/units/land/tank_heavy_meteor/tank_heavy_meteor_ammo.json",
+  
+      "/pa/units/land/bot_sun/bot_sun_ammo.json",
+    
+	  "/pa/units/land/bot_pop/bot_pop_ammo.json",
+    
+      "/pa/units/land/bot_stealth/bot_stealth_ammo.json",
+      "/pa/units/land/time_bomb/time_bomb_ammo.json",
+	 
+	 
+    
+	  "/pa/units/land/hound/ram_ammo.json",
+	  "/pa/units/land/a_assault_bot/a_assault_bot_ammo.json",
+	  "/pa/units/land/bot_ubercannon/bot_ubercannon_ammo.json",
+	
+	 
+	  "/pa/units/land/raptor_bot_1/raptor_bot_1_ammo.json",
+	
+
+	  "/pa/units/land/tank_attack/tank_attack_ammo.json",
+   
+     
+	
+	  
+	 
+	 
+	
+	  
+	  
+	
+    
+      "/pa/units/air/a_fighter/a_fighter_ammo.json",
+  
+      "/pa/units/air/cloud/cloud_ammo.json",
+	  
+      
+      "/pa/units/land/rocket_defense/rocket_defense_ammo.json",
+      
+      
+	  "/pa/units/air/bomber_ball/ball_ammo.json",
+	  
+	  
+	  "/pa/units/land/a_tank/a_tank_ammo.json"
   ],
   "anti_entity_targets_units": false,
   "auto_task_type": "anti_entity",

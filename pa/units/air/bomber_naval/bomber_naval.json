@@ -35,7 +35,7 @@
     {
       "filename": "/pa/effects/misc/jets.pfx",
       "offset": [
-        5.1,
+        4.1,
         2.5,
         1
       ],
@@ -44,7 +44,7 @@
     {
       "filename": "/pa/effects/misc/jets.pfx",
       "offset": [
-        -5.1,
+        -4.1,
         2.5,
         1
       ],
@@ -61,7 +61,7 @@
   ],
   "model": {
     "arrows": 5,
-    "filename": "/pa/units/air/bomber_naval/bomber_torpedo.papa"
+    "filename": "/pa/units/air/bomber_naval/tor_bomb.papa"
   },
   "navigation": {
     "acceleration": 75,

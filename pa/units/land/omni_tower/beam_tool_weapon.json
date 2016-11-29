@@ -1,0 +1,20 @@
+{
+  "ammo_id": "/pa/units/land/omni_tower/beam_ammo.json",
+  "auto_attack": true,
+  "idle_aim_delay": 3,
+  "max_range": 180,
+  "pitch_range": 160,
+  "pitch_rate": 360,
+  "rate_of_fire": 15,
+  "spread_fire": false,
+  "target_layers": [
+    "WL_LandHorizontal",
+    "WL_WaterSurface"
+  ],
+  "target_priorities": [
+    "Structure"
+  ],
+  "tool_type": "TOOL_Weapon",
+  "yaw_range": 160,
+  "yaw_rate": 360
+}

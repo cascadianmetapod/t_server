@@ -1,0 +1,103 @@
+{
+  "TEMP_texelinfo": 16.0481,
+  "audio": {
+    "loops": {
+      "move": {
+        "cue": "/SE/Movement/sea/nuclear_sub_loop",
+        "flag": "vel_changed",
+        "should_start_func": "is_moving",
+        "should_stop_func": "is_not_moving"
+      }
+    },
+    "selection_response": {
+      "cue": "/SE/Selection/sea/sea_large"
+    }
+  },
+  "base_spec": "/pa/units/sea/base_ship/base_ship.json",
+  "build_metal_cost": 3500,
+  "description": "Stealthy naval superiority sub. Equiped with a powerful missile launcher and rapid fire torpedos.",
+  "display_group": 40,
+  "display_index": 100,
+  "display_name": "MANTA",
+  "events": {
+    "build_complete": {
+      "audio_cue": "/SE/Build_Complete/sea"
+    },
+    "died": {
+      "audio_cue": "/SE/Death/Sea_sub"
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/sea/nuclear_sub_fire"
+    }
+  },
+ 
+  "max_health": 3000,
+  "mesh_bounds": [
+    5,
+    35,
+    5
+  ],
+  "model": {
+    "arrows": 5,
+    "filename": "/pa/units/sea/manta_sub/manta.papa"
+  },
+  "navigation": {
+    "acceleration": 40,
+    "brake": 120,
+    "dodge_multiplier": 1.0,
+    "dodge_radius": 10,
+    "move_speed": 12,
+    "turn_accel": 20,
+    "turn_speed": 60,
+    "type": "underwater",
+    "wobble_factor": 0.0,
+    "wobble_speed": 0.0
+  },
+  "physics": {
+    "push_class": 2,
+    "radius": 6
+  },
+  "recon": {
+  "observable": {
+      "ignore_radar": true,
+      "layer": "underwater"
+    },
+    "observer": {
+      "items": [
+        {
+          "channel": "sight",
+          "layer": "surface_and_air",
+          "radius": 180,
+          "shape": "capsule"
+        }
+      ]
+    }
+  },
+  "spawn_layers": "WL_WaterSurface",
+  "tools": [
+    {
+      "aim_bone": "bone_root",
+      "muzzle_bone": "socket_leftMuzzle",
+      "spec_id": "/pa/units/sea/manta_sub/manta_sub_tool_weapon.json"
+    },
+	{
+      "aim_bone": "bone_root",
+      "muzzle_bone": "socket_rightMuzzle",
+      "spec_id": "/pa/units/sea/manta_sub/manta_sub_tool_weapon.json"
+    },
+	{
+      "aim_bone": "bone_root",
+      "muzzle_bone": "socket_muzzelBack",
+      "spec_id": "/pa/units/sea/manta_sub/manta_sub_missile_tool_weapon.json"
+    }
+  ],
+  "unit_types": [
+    "UNITTYPE_Naval",
+    "UNITTYPE_Mobile",
+    "UNITTYPE_Offense",
+    "UNITTYPE_Advanced",
+    "UNITTYPE_Tactical",
+    "UNITTYPE_FactoryBuild"
+  ],
+  "wreckage_health_frac": 0
+}

@@ -28,9 +28,9 @@
     }
   },
   "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
-  "build_metal_cost": 60,
-  "description": "Short range Halfire-Missile Bot. Fires a steady stream of High-Explosive rockets.",
-  "display_name": "Sungazer",
+  "build_metal_cost": 120,
+  "description": "Short range Halfire-Missile Bot. Fires a steady stream of High-Explosive rockets!",
+  "display_name": "Iggy",
   "events": {
     "build_complete": {
       "audio_cue": "/SE/Build_Complete/bot"

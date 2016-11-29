@@ -31,7 +31,8 @@
     "ORDER_Reclaim",
     "ORDER_Repair",
     "ORDER_Assist",
-    "ORDER_Use"
+    "ORDER_Use",
+	"ORDER_FireSecondaryWeapon"
 	],
 	"guard_layer": "WL_LandHorizontal",
 	"recon": {
@@ -52,7 +53,7 @@
 	},
 	"model": [{
 		"layer": "WL_LandHorizontal",
-		"filename": "/pa/units/land/engineering_station/engineering_station.papa",
+		"filename": "/pa/units/land/engineering_station/t1_tower.papa",
 		"animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json",
 		"skirt_decal": "/pa/effects/specs/skirt_defense.json"
 	},
@@ -72,20 +73,30 @@
   },
   "physics": {
     "allow_pushing": false,
-    "radius": 3
+    "radius": 1
   },
-	"tools": [{
+	"tools": [
+	{
 		"spec_id": "/pa/units/land/engineering_station/engineering_station_build_arm.json",
 		"aim_bone": "bone_pitch",
 		"muzzle_bone": ["bone_muzzle"]
-	}],
+	},
+	{
+      "aim_bone": "bone_turret",
+      "muzzle_bone": "bone_muzzle",
+      "secondary_weapon": true,
+      "spec_id": "/pa/units/land/engineering_station/cannon.json"
+    }
+	
+	],
+	
 	"events": {
 		"build_complete": {
 			"audio_cue": "/SE/Build_Complete/structure_small"
 		},
 		"fired": {
-			"audio_cue": "/SE/Weapons/structure/air_defense_fire",
-			"effect_spec": "/pa/effects/specs/fab_combat_spray.pfx"
+			"audio_cue": "/SE/Weapons/structure/air_defense_fire"
+			
 		},
 		"died": {
 			"audio_cue": "/SE/Death/structure_small",

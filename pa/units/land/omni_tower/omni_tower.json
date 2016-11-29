@@ -1,0 +1,195 @@
+{
+	"base_spec": "/pa/units/land/base_structure/base_structure.json",
+	"display_name":"Omni Tower",
+	"description":"Ultimate Base Defence. Equiped with Lazers, Rockets, and Love. Attacks everything, builds almost anything.",
+	"max_health": 30000,
+	"build_metal_cost": 25000,
+	"atrophy_rate": 10,
+	"atrophy_cool_down": 15,
+	"spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+	"area_build_separation": 1,
+	
+	"unit_types": [
+	"UNITTYPE_Commander",
+	"UNITTYPE_Fabber",
+    "UNITTYPE_Construction",
+    "UNITTYPE_Mobile",
+	"UNITTYPE_Advanced",
+	"UNITTYPE_Land",
+	"UNITTYPE_Hover",
+	"UNITTYPE_FabAdvBuild"],
+	
+	"buildable_types": "Land & Structure & Advanced | Factory & Advanced | FabAdvBuild | FabBuild",
+	
+	
+	"command_caps": [
+	"ORDER_Move",
+    "ORDER_Patrol",
+    "ORDER_Build",
+    "ORDER_Reclaim",
+    "ORDER_Repair",
+    "ORDER_Assist",
+	"ORDER_Attack",
+    "ORDER_Use"
+
+
+	],
+	"guard_layer": "WL_LandHorizontal",
+	"recon": {
+		"observer": {
+			"items": [{
+				"layer": "surface_and_air",
+				"channel": "sight",
+				"shape": "capsule",
+				"radius": 400
+			},
+			{
+				"layer": "underwater",
+				"channel": "sight",
+				"shape": "capsule",
+				"radius": 300
+			}]
+		}
+	},
+	"model": [{
+		"layer": "WL_LandHorizontal",
+		"filename": "/pa/units/land/omni_tower/t3_tower.papa",
+		"animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json",
+		"skirt_decal": "/pa/effects/specs/skirt_defense.json"
+	},
+	{
+		"layer": "WL_WaterSurface",
+		"filename": "/pa/units/land/engineering_station/engineering_station.papa",
+		"animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json"
+	}],
+	
+	"navigation": {
+    "acceleration": 0,
+    "brake": 0,
+    "group_preference": "back",
+    "move_speed": 0,
+    "turn_speed": 0,
+    "type": "Mobile"
+  },
+  "physics": {
+    "radius": 4,
+        "allow_pushing": true
+  },
+	"tools": [{
+		"spec_id": "/pa/units/land/advanced_engineering_station/advanced_engineering_station_build_arm.json",
+		"aim_bone": "bone_turret",
+		"muzzle_bone": "bone_muzzle"
+	},
+    {
+      "aim_bone": "bone_turret002",
+	  "muzzle_bone": "socket_muzzle003",
+      "fire_event": "fired2",
+      "spec_id": "/pa/units/land/omni_tower/missile_tool_weapon.json"
+    },
+	 {
+      "aim_bone": "bone_turret002",
+	  "muzzle_bone": "socket_muzzle004",
+      "fire_event": "fired2",
+      "spec_id": "/pa/units/land/omni_tower/missile_tool_weapon.json"
+    },
+	 {
+      "aim_bone": "bone_turret002",
+	  "muzzle_bone": "socket_muzzle005",
+      "fire_event": "fired2",
+      "spec_id": "/pa/units/land/omni_tower/missile_tool_weapon.json"
+    },
+	{
+      "aim_bone": "bone_turret002",
+	  "muzzle_bone": "socket_muzzle006",
+      "fire_event": "fired2",
+      "spec_id": "/pa/units/land/omni_tower/missile_tool_weapon.json"
+    },
+	 {
+      "aim_bone": "bone_turret002",
+	  "muzzle_bone": "socket_muzzle007",
+      "fire_event": "fired2",
+      "spec_id": "/pa/units/land/omni_tower/missile_tool_weapon.json"
+    },
+	 {
+      "aim_bone": "bone_turret002",
+	  "muzzle_bone": "socket_muzzle008",
+      "fire_event": "fired2",
+      "spec_id": "/pa/units/land/omni_tower/missile_tool_weapon.json"
+    },
+	 {
+      "aim_bone": "bone_turret002",
+	  "muzzle_bone": "socket_muzzle009",
+      "fire_event": "fired2",
+      "spec_id": "/pa/units/land/omni_tower/missile_tool_weapon.json"
+    },
+	 {
+      "aim_bone": "bone_turret002",
+	  "muzzle_bone": "socket_muzzle010",
+      "fire_event": "fired2",
+      "spec_id": "/pa/units/land/omni_tower/missile_tool_weapon.json"
+    },
+    {
+      "aim_bone": "bone_turret002",
+	  "muzzle_bone": "bone_t",
+      "fire_event": "fired2",
+      "spec_id": "/pa/units/land/omni_tower/beam_tool_weapon.json"
+    }
+	
+	],
+	
+	"events": {
+		"build_complete": {
+			"audio_cue": "/SE/Build_Complete/structure_small"
+		},
+		"fired": {
+			"audio_cue": "/SE/Weapons/structure/air_defense_fire",
+			"effect_spec": "/pa/effects/specs/fab_combat_spray.pfx"
+		},
+		"died": {
+			"audio_cue": "/SE/Death/structure_small",
+			"effect_scale": 0.5
+		}
+	},
+	"audio": {
+		"loops": {
+			"build": {
+				"cue": "/SE/Construction/Fab_contruction_beam_loop",
+				"flag": "build_target_changed",
+				"should_start_func": "has_build_target",
+				"should_stop_func": "no_build_target"
+			}
+		}
+	},
+	"fx_offsets": [{
+		"type": "build",
+		"filename": "/pa/effects/specs/fab_combat_spray.pfx",
+		"bone": "bone_muzzle",
+		"offset": [0,
+		0,
+		0],
+		"orientation": [0,
+		0,
+		0]
+	}],
+	"selection_icon": {
+		"diameter": 15.0
+	},
+	"mesh_bounds": [5,
+	5,
+	9],
+	"mass_teleporter":{
+		"energy_drain": 1000
+	},
+	"teleportable": {},
+	"production": {
+    "energy": 5000,
+    "metal": 30
+  },
+   "death_weapon": {
+    "air_ammo_spec": "/pa/ammo/nuke_pbaoe/nuke_pbaoe_air.json",
+    "air_height_threshold": 50,
+    "ground_ammo_spec": "/pa/ammo/nuke_pbaoe/nuke_pbaoe.json"
+  },
+	
+	"TEMP_texelinfo": 9.4493
+}

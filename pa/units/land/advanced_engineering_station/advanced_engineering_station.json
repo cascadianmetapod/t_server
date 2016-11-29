@@ -29,7 +29,8 @@
     "ORDER_Reclaim",
     "ORDER_Repair",
     "ORDER_Assist",
-    "ORDER_Use"
+    "ORDER_Use",
+	"ORDER_FireSecondaryWeapon"
 	],
 	"guard_layer": "WL_LandHorizontal",
 	"recon": {
@@ -50,7 +51,7 @@
 	},
 	"model": [{
 		"layer": "WL_LandHorizontal",
-		"filename": "/pa/units/land/engineering_station/engineering_station.papa",
+		"filename": "/pa/units/land/advanced_engineering_station/t2_tower.papa",
 		"animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json",
 		"skirt_decal": "/pa/effects/specs/skirt_defense.json"
 	},
@@ -76,7 +77,13 @@
 		"spec_id": "/pa/units/land/advanced_engineering_station/advanced_engineering_station_build_arm.json",
 		"aim_bone": "bone_pitch",
 		"muzzle_bone": ["bone_muzzle"]
-	}],
+	},
+	{
+      "aim_bone": "bone_turret",
+      "muzzle_bone": "bone_muzzle",
+      "secondary_weapon": true,
+      "spec_id": "/pa/units/land/advanced_engineering_station/cannon.json"
+    }],
 	"events": {
 		"build_complete": {
 			"audio_cue": "/SE/Build_Complete/structure_small"
