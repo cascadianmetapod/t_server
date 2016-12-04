@@ -64,7 +64,7 @@ var Build = (function() {
                 
                 "/pa/units/land/artillery_long/artillery_long.json": ["combat", 2],
               
-                "/pa/units/orbital/ion_deffense_ion_deffense.json":["combat", 15],
+                "/pa/units/orbital/ion_deffense_ion_deffense.json":["combat", 14],
                 "/pa/units/land/aa_turret/aa_turret.json":["combat", 15],
                 "/pa/units/land/rocket_defense/rocket_defense.json":["combat", 16],
                 
