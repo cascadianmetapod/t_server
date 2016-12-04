@@ -64,7 +64,7 @@ var Build = (function() {
                 
                 "/pa/units/land/artillery_long/artillery_long.json": ["combat", 2],
               
-              
+                "/pa/units/orbital/ion_deffense_ion_deffense.json":["combat", 15],
                 "/pa/units/land/aa_turret/aa_turret.json":["combat", 15],
                 "/pa/units/land/rocket_defense/rocket_defense.json":["combat", 16],
                 
@@ -88,6 +88,8 @@ var Build = (function() {
               "/pa/units/land/mb1/mb1.json": ["vehicle", 2],
                 "/pa/units/land/tank_attack/tank_attack.json": ["vehicle", 14],
                 "/pa/units/land/tank_heavy/tank_heavy.json": ["vehicle", 1],
+				"/pa/units/land/avalanche/avalanche.json": ["vehicle", 7],
+				"/pa/units/land/t2_hover_tank/t2_hover_tank.json": ["vehicle", 6],
                 "/pa/units/land/tank_orbital/tank_orbital.json": ["vehicle", 8],
                 "/pa/units/land/tank_heavy_mortar/tank_heavy_mortar.json": ["vehicle", 9],
                 
@@ -96,7 +98,7 @@ var Build = (function() {
                "/pa/units/land/a_tank/a_tank.json": ["vehicle", 12],
                "/pa/units/land/tank_tank/tank_tank.json": ["vehicle", 13],
                
-                "/pa/units/land/aa_missile_vehicle/aa_missile_vehicle.json": ["vehicle", 16],
+                "/pa/units/land/aa_vehicle/aa_vehicle.json": ["vehicle", 16],
 				 "/pa/units/land/combat_fab_veh/combat_fab_veh.json": ["vehicle", 17],
                  "/pa/units/land/bomb_bike/bomb_bike.json": ["vehicle", 15],
 

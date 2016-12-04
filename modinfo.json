@@ -298,7 +298,10 @@
        "/pa/units/sea/manta_sub/manta_sub.json",
 	   "/pa/units/sea/recon_sub/recon_sub.json",
 	   "/pa/units/land/omni_tower/omni_tower.json",
-	   "/pa/units/land/aa_turret/aa_turret.json"
+	   "/pa/units/land/aa_turret/aa_turret.json",
+	   "/pa/units/land/aa_vehicle/aa_vehicle.json",
+	   "/pa/units/land/t2_hover_tank/t2_hover_tank.json",
+	   "/pa/units/land/avalanche/avalanche.json"
     ]
   },
     "build": "Unknown",

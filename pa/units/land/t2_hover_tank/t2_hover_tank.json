@@ -1,5 +1,6 @@
 {
-  "TEMP_texelinfo": 6.20134,
+  "TEMP_texelinfo": 5.84968,
+  "armor_type": "AT_Hover",
   "attachable": {
     "offsets": {
       "head": [
@@ -16,63 +17,35 @@
   },
   "audio": {
     "loops": {
-      "build": {
-        "cue": "/SE/Construction/Fab_contruction_beam_loop",
-        "flag": "build_target_changed",
-        "should_start_func": "has_build_target",
-        "should_stop_func": "no_build_target"
-      },
       "move": {
-        "cue": "/SE/Movement/veh/fab_loop",
+        "cue": "/SE/Movement/veh/tank_hover_loop",
         "flag": "vel_changed",
         "should_start_func": "is_moving",
         "should_stop_func": "is_not_moving"
       }
     },
     "selection_response": {
-      "cue": "/SE/Selection/veh/fab"
+      "cue": "/SE/Selection/veh/tank_hover"
     }
   },
   "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
-  "build_metal_cost": 400,
- "buildable_types": "CombatFabAdvBuild",
-  "command_caps": [
-    "ORDER_Move",
-    "ORDER_Patrol",
-    "ORDER_Build",
-    "ORDER_Reclaim",
-    "ORDER_Repair",
-    "ORDER_Assist",
-    "ORDER_Use"
-  ],
-  "description": "!LOC:Advanced tactical construction and repair - Hover",
-  "display_name": "!LOC:Beaver",
+  "build_metal_cost": 825,
+  "description": "!LOC:Hover Tank- Fast. Can cross water and lava. Attacks land and sea targets.",
+  "display_name": "!LOC:Carmanah",
   "events": {
     "build_complete": {
-      "audio_cue": "/SE/Build_Complete/fab"
+      "audio_cue": "/SE/Build_Complete/veh"
     },
     "died": {
-      "audio_cue": "/SE/Death/Veh",
-      "effect_scale": 1.5
+      "audio_cue": "/SE/Death/Veh"
+    },
+    "fired": {
+      "audio_cue": "/SE/Weapons/veh/tank_hover_fire",
+      "effect_spec": "/pa/effects/specs/tank_muzzle_flash.pfx socket_muzzle"
     }
   },
   "fx_offsets": [
     {
-      "bone": "bone_pitch",
-      "filename": "/pa/effects/specs/fab_spray.pfx",
-      "offset": [
-        0,
-        -4.198,
-        0.381
-      ],
-      "orientation": [
-        0,
-        0,
-        0
-      ],
-      "type": "build"
-    },
-	 {
       "bone": "bone_root",
       "filename": "/pa/effects/specs/hover_idle_01.pfx",
       "offset": [
@@ -133,6 +106,7 @@
       "type": "idle"
     }
   ],
+  "guard_layer": "WL_LandHorizontal",
   "headlights": [
     {
       "color": [
@@ -181,28 +155,28 @@
       ]
     }
   ],
-  "guard_layer": "WL_LandHorizontal",
-  "max_health": 50,
+  "max_health": 1250,
   "mesh_bounds": [
-    4.5,
-    6,
-    3
+    4.93769,
+    6.4,
+    2.6835
   ],
   "model": {
-    "animtree": "/pa/anim/anim_trees/fabrication_turret_anim_tree.json",
-    "arrows": 5,
-    "filename": "/pa/units/land/combat_fab_veh/beaver.papa"
+    "animations": {
+      "hover": "/pa/units/land/tank_hover/tank_hover_anim_hover.papa"
+    },
+    "animtree": "/pa/units/land/t2_hover_tank/tank_hover_anim_tree.json",
+    "filename": "/pa/units/land/t2_hover_tank/t2_hover_tank.papa"
   },
   "navigation": {
-    "acceleration": 120,
-    "brake": 120,
-    "group_preference": "back",
-    "move_speed": 15,
-    "turn_speed": 360,
+    "acceleration": 140,
+    "brake": 140,
+    "move_speed": 14,
+    "turn_speed": 90,
     "type": "hover"
   },
   "physics": {
-    "allow_pushing": true,
+    "air_friction": 0.5,
     "radius": 3
   },
   "recon": {
@@ -211,34 +185,48 @@
         {
           "channel": "sight",
           "layer": "surface_and_air",
-          "radius": 100,
-          "shape": "capsule"
-        },
-        {
-          "channel": "sight",
-          "layer": "underwater",
-          "radius": 100,
+          "radius": 150,
           "shape": "capsule"
         }
       ]
     }
   },
+  "selection_icon": {
+    "diameter": 12.0
+  },
   "tools": [
     {
-      "aim_bone": "bone_root",
-      "spec_id": "/pa/units/land/combat_fab_veh/combat_fab_veh_build_arm.json"
+      "aim_bone": "bone_pitch",
+      "muzzle_bone": "bone_muzzle001",
+      "spec_id": "/pa/units/land/t2_hover_tank/t2_hover_tank_tool_weapon.json"
+    },
+	{
+      "aim_bone": "bone_pitch",
+      "muzzle_bone": "bone_muzzle002",
+      "spec_id": "/pa/units/land/t2_hover_tank/t2_hover_tank_tool_weapon.json"
+    },
+	{
+      "aim_bone": "bone_muzzle004",
+      "muzzle_bone": "bone_muzzle002",
+      "spec_id": "/pa/units/land/t2_hover_tank/t2_hover_tank_tool_weapon2.json"
+    },
+	{
+      "aim_bone": "bone_muzzle003",
+      "muzzle_bone": "bone_muzzle003",
+      "spec_id": "/pa/units/land/t2_hover_tank/t2_hover_tank_tool_weapon2.json"
     }
   ],
   "transportable": {
     "size": 1
   },
   "unit_types": [
-    "UNITTYPE_Construction",
     "UNITTYPE_Tank",
     "UNITTYPE_Mobile",
-    "UNITTYPE_Basic",
+    "UNITTYPE_Offense",
     "UNITTYPE_Land",
+    "UNITTYPE_Basic",
+    "UNITTYPE_Hover",
     "UNITTYPE_FactoryBuild",
-    "UNITTYPE_CannonBuildable"
+	"UNITTYPE_Advanced"
   ]
 }

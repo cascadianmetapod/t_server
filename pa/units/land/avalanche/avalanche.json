@@ -1,11 +1,11 @@
 {
-  "TEMP_texelinfo": 6.12932,
+  "TEMP_texelinfo": 9.04444,
   "attachable": {
     "offsets": {
       "head": [
         0,
-        1,
-        4.1
+        -0.5,
+        6.1
       ],
       "root": [
         0,
@@ -17,58 +17,55 @@
   "audio": {
     "loops": {
       "move": {
-        "cue": "/SE/Movement/veh/aa_missile_vehicle_loop",
+        "cue": "/SE/Movement/veh/tank_vagaurd_loop_T2",
         "flag": "vel_changed",
         "should_start_func": "is_moving",
         "should_stop_func": "is_not_moving"
       }
     },
     "selection_response": {
-      "cue": "/SE/Selection/veh/aa_missile_vehicle"
+      "cue": "/SE/Selection/veh/tank_vagaurd_T2"
     }
   },
   "base_spec": "/pa/units/land/base_vehicle/base_vehicle.json",
-  "build_metal_cost": 130,
-  "description": "!LOC:Mobile Anti-Air- Equipped with homing missiles. Only attacks air.",
-  "display_name": "!LOC:Lizard",
+  "build_metal_cost": 1500,
+  "description": "!LOC:Heavy tank- Advanced short range, heavily armored vehicle.",
+  "display_name": "!LOC:Avalanche",
   "events": {
     "build_complete": {
       "audio_cue": "/SE/Build_Complete/veh"
     },
     "died": {
       "audio_cue": "/SE/Death/Veh",
-      "effect_scale": 1.0
+      "effect_scale": 1.2,
+      "effect_spec": "/pa/effects/specs/default_explosion_bot_t2.pfx"
     },
     "fired": {
-      "audio_cue": "/SE/Weapons/veh/aa_missile_vehicle_fire",
+	 "audio_cue": "/SE/Weapons/orb/orb_ssx_laser_fire",
       "effect_spec": "/pa/effects/specs/default_muzzle_flash.pfx socket_muzzle"
     }
   },
-  "guard_layer": "WL_Air",
-  "max_health": 160,
+  "guard_layer": "WL_LandHorizontal",
+  "max_health": 7000,
   "mesh_bounds": [
-    3.8,
-    5,
-    5
+    7.5,
+    8.2,
+    6.2
   ],
   "model": {
-    "animations": {
-      "run": "/pa/units/land/aa_missile_vehicle/aa_missile_vehicle_anim_run.papa"
-    },
-    "animtree":"/pa/units/land/aa_vehicle/aa_vehicle_anim_tree.json",
-    "filename": "/pa/units/land/aa_vehicle/aa_car.papa",
-    "walk_speed": 7
+    "animtree": "/pa/anim/anim_trees/tank_armor_anim_tree.json",
+    "filename": "/pa/units/land/avalanche/tank_nic.papa"
   },
   "navigation": {
     "acceleration": 100,
     "brake": 100,
-    "move_speed": 9,
+    "group_preference": "front",
+    "move_speed": 10,
     "turn_speed": 180,
     "type": "land-small"
   },
-  "nearby_target_tick_update_interval": 3,
   "physics": {
-    "radius": 3.5
+    "radius": 6
   },
   "recon": {
     "observer": {
@@ -80,6 +77,12 @@
           "shape": "capsule"
         },
         {
+          "channel": "radar",
+          "layer": "surface_and_air",
+          "radius": 150,
+          "shape": "capsule"
+        },
+        {
           "channel": "sight",
           "layer": "underwater",
           "radius": 100,
@@ -88,19 +91,18 @@
       ]
     }
   },
+  "scrolling_uv": {
+    "scroll_rate": 0.58,
+    "uv_split": 0.855
+  },
   "selection_icon": {
-    "diameter": 10.0
+    "diameter": 14
   },
   "tools": [
     {
-      "aim_bone": "bone_turret001",
-      "muzzle_bone": "socket_muzzle001",
-      "spec_id": "/pa/units/land/aa_vehicle/aa_vehicle_tool_weapon.json"
-    },
-	{
-      "aim_bone": "bone_turret002",
-      "muzzle_bone": "socket_muzzle002",
-      "spec_id": "/pa/units/land/aa_vehicle/aa_vehicle_tool_weapon.json"
+      "aim_bone": "bone_root",
+      "muzzle_bone": "socket_muzzle",
+      "spec_id": "/pa/units/land/avalanche/tank_heavy_armor_tool_weapon.json"
     }
   ],
   "transportable": {
@@ -108,12 +110,11 @@
   },
   "unit_types": [
     "UNITTYPE_Tank",
+    "UNITTYPE_Heavy",
     "UNITTYPE_Mobile",
-    "UNITTYPE_AirDefense",
+    "UNITTYPE_Offense",
     "UNITTYPE_Land",
-    "UNITTYPE_Basic",
-    "UNITTYPE_FactoryBuild",
-    "UNITTYPE_CannonBuildable",
-    "UNITTYPE_Offense"
+    "UNITTYPE_Advanced",
+    "UNITTYPE_FactoryBuild"
   ]
 }
